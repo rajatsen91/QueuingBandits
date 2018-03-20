@@ -6,24 +6,23 @@ Paper url: https://arxiv.org/abs/1604.06377
 
 Dependencies: pandas, numpy, matplotlib, multiprocessing
 
-Function to simulate QB for many runs in parallel: ep_greedy_avg_wopt_par_var(mu,u,K,l,t,num_sim,nthread)
+Function to simulate QB for many runs in parallel: _ep_greedy_avg_wopt_par_var(mu,u,K,l,t,num_sim,nthread)_
 	
   
-  ```python
-  '''
-     	   num_sim: number of experiments
-	   nthread: number of parallel threads (recommended to number of cores in the machine)
-	   mu: True service rate matrix (u * K numpy matrix : all elements less than 1.0)
-	   u: number of users
-	   K: number of servers
-	   l: service rates (listof size u)
-	   t: Time Horizon
-	   
-	   Returns: (q,q0,sq)
-	   q: array of average queue lengths for bandit algorithm for u queues each till time horizon t
-	   q0: array of average optimal queue length for u queues each till time horizon t
-	   sq: std. of queue regret (q - q0) over all the runs
-	 '''
+```python
+'''
+   num_sim: number of experiments
+   nthread: number of parallel threads (recommended to number of cores in the machine)
+   mu: True service rate matrix (u * K numpy matrix : all elements less than 1.0)
+   u: number of users
+   K: number of servers	   
+   l: service rates (listof size u)
+   t: Time Horizon
+   Returns: (q,q0,sq)
+   q: array of average queue lengths for bandit algorithm for u queues each till time horizon t
+   q0: array of average optimal queue length for u queues each till time horizon t
+   sq: std. of queue regret (q - q0) over all the runs
+'''
 	 
 ```
 
